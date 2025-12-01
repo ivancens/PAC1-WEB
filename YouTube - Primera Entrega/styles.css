@@ -1,0 +1,706 @@
+body {
+      font-family: "Roboto", Arial, sans-serif;
+      margin: 0;
+    }
+
+body, html {
+    overflow-x: hidden;
+}
+    /* PARTS DEL HEADER. Part General + 3 Parts Principals: Esquerra, Central, Dreta. */
+
+    header {
+        position: fixed;
+        height: 56px;
+        background: white;
+        width: 100%;
+        z-index: 15;
+    }
+
+    .header_general {
+        padding: 0 16px;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .part_esquerra {
+        display: flex;
+        align-items: center;
+        width: 240px;
+        gap: 20px;
+        margin-bottom: 1px;
+    }
+
+    .part_central {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        height: 70%;
+    }
+
+    .part_dreta {
+        display: flex;
+        justify-content: flex-end;
+        width: 240px;
+        gap: 13px;
+        margin-left: auto;
+        margin-right: 34px;
+    }
+
+
+    /* Elements Generals del Header                                                   */
+
+    .logo {
+        padding-left: 4px;
+    }
+
+    .menu {
+        padding-left: 8px;
+        margin-bottom: 1px;
+    }
+
+    .buscador_general {
+        display: flex;
+        width: 600px;                
+        height: 39px; 
+        border: 1px solid #c6c6c6;
+        border-radius: 24px;         
+        overflow: hidden;
+        padding-right: 0px;
+        margin-right: 14px;
+        margin-left: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Zona de text         */
+    .zona_text {
+        flex: 1;                     
+        display: flex;
+        align-items: center;
+        padding-left: 16px;
+    }
+
+    /* Text de l'interior   */
+    .text_interior {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #333;
+        height: 100%;
+    }
+
+    /* Botó de la lupa      */
+    .lupa {
+        width: 64px;                 
+        display: flex;
+        border-left: 1px solid #d3d3d3;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        background-color: #f8f8f8;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .micro {
+        margin-top: 3px;
+        width: 40px;
+        height: 40px;
+        padding-right: 25px;
+    }
+
+    .crear2 {
+        width: 99px;
+        height: 95%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1px;
+    }
+
+    .campana_div {
+        padding: 5px 16px 0 0;
+        margin-top: 2px;
+        width: 24px;
+        height: 30px;
+        position: static;
+    }
+
+    .div_perfil {
+        margin: 6px 12px 0 1px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;               /* Evita que surti del cercle                           */
+    }
+
+    .foto_perfil {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /* PARTS DEL PANELL LATERAL. Part Lateral + 7 Parts Principals: Superior, Central, penultima, pentaultima, ultima, ultima2, ultima3. */
+
+    .menu_lateral {
+        width: 240px;                   /* Amplada de Bandes                                    */
+        height: calc(100vh - 56px);     /* Tot l’alçada de la pantalla                          */
+        position: fixed;                /* Fixat a l’esquerra                                   */
+        top: 56px;                      /* Just sota el header                                  */
+        left: 0;
+        overflow-y: auto;               /* Scroll si hi ha massa opcions                        */
+        overflow-x: hidden;
+        padding-top: 12px;
+    }
+
+    .part_superior_lateral {
+        width: 229.5px;                 /* Amplada de Bandes                                    */
+        height: 369.6px;                /* Tota l’alçada de la pantalla                         */
+    }
+
+    .part_central_lateral {
+        width: 229.5px;                 /* Amplada de Bandes                                    */
+        height: 350px;                  /* Tota l’alçada de la pantalla                         */
+    }
+
+    .part_penultima_lateral {
+        width: 240px;                   /* Amplada de Bandes                                    */
+        height: 180px;                  /* Tota l’alçada de la pantalla                         */
+    }
+
+    .part_pentaultima_lateral {
+        width: 240px;                   /* Amplada de Bandes                                    */
+        height: 206px;                  /* Tota l’alçada de la pantalla                         */
+    }
+
+    .part_ultima_lateral {
+        width: 240px;                   /* Amplada de Bandes                                    */
+        height: 75px;                   /* Tota l’alçada de la pantalla                         */
+        padding: 8px 0 0 23px;
+        flex-wrap: wrap;                
+    }
+
+    .part_ultima2_lateral {
+        width: 240px;                   /* Amplada de Bandes                                    */
+        height: 75px;                   /* Tota l’alçada de la pantalla                         */
+        padding: 8px 0 0 23px;
+        flex-wrap: wrap;                 
+    }
+
+    .part_ultima3_lateral {
+        width: 240px;                   /* Amplada de Bandes                                    */
+        height: 68px;                   /* Tota l’alçada de la pantalla                         */
+        padding-top: 8px;
+        padding-left: 23px;
+    }
+
+
+    /* Elements Generals del Panell Lateral Esquerre                                                                                     */
+
+    .boto_total {
+        margin-left: 12px;
+        margin-right: 14px;
+    }
+
+    .seccio_menu {
+        margin: 0 10px 0 0;
+        padding-left: 12px;
+    }
+
+    .botonet_menu {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        gap: 24px;
+    }
+
+    .botonet_menu svg,
+    .botonet_menu_inicio svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .botonet_menu span {
+        font-size: 14px;
+        white-space: nowrap;            /* Forma de mantenir un text (span) a la mateixa línia  */
+    }
+
+    .botonet_menu_inicio {              /* Botonet del panell lateral amb fons (Boto Principal) */
+        width: 192px;
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        padding-left: 12px;
+        gap: 24px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        position: relative;             /* No tocar o es mourà el botó inicio                   */
+        left: -12px;
+    }
+
+    .botonet_menu_inicio span {
+        font-size: 14px;
+        white-space: nowrap;            /* Forma de mantenir un text (span) a la mateixa línia  */
+    }
+
+    .separador {
+        margin-right: 2px;
+        margin-left: 12px;
+        margin-bottom: 10px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+
+    /* Botons Títol de Cada SECCIÓ                                                                                                       */
+    
+    .botonet_menu1 {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        gap: 8px;
+    }
+
+    .botonet_menu1 svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .botonet_menu1 span {
+        font-size: 15.7px;
+        color: #000000;
+    }
+
+    .boto_total2 {
+        margin: 0 14px 0 12px;
+        padding-top: 3px;
+        margin-bottom: 5px;
+    }
+
+    .seccio_menu2 {
+        margin: 0;
+        margin-right: 10px;
+        padding-left: 12px;
+    }
+
+    .tu {
+        margin-top: 2px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .tu svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .span_text {
+        margin: 0 14px 0 15px;
+        padding: 8px 8px 5px 8px;
+    }
+
+    .part_ultima_lateral a{
+        font-size: 12.5px;
+        color: #606060;
+        text-decoration: none;
+        margin: 0 8px 0 0;
+        white-space: nowrap;            /* Manté en una sola línea cada "a"                     */
+    }
+
+    .part_ultima2_lateral a{
+        font-size: 12.5px;
+        color: #606060;
+        text-decoration: none;
+        margin: 0 8px 0 0;
+        white-space: nowrap;            /* Manté en una sola línea cada "a"                     */
+    }
+
+    .part_ultima3_lateral p{
+        font-size: 12px;
+        color: #909090;
+        text-decoration: none;
+        margin: 10px 8px 0 0;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /* BOTONS PART SUPERIOR BODY                                                                */
+
+    .botons_generals {
+        position: fixed;
+        width: calc(100% - 240px);
+        height: 56px;
+        top: 53px;
+        left: 240px;
+        background-color: white;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        z-index: 15;
+        padding-top: 3px;
+    }
+
+    .botons_negres {                    /* Utilitzat al botó Inicio                             */
+        display: inline-flex;           /* Només ocupa l'amplada del contingut                  */
+        align-items: center;
+        padding: 8px 13px 7px 11px;
+        margin: 12px 0 0 24px;
+        color: white;
+        font-size: 14px;
+        background-color: black;
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+
+    .boto_individual {                  /* Utilitzat a la resta de botons                       */
+        display: inline-flex;           /* Només ocupa l'amplada del contingut                  */
+        align-items: center;
+        padding: 8px 13px 7px 11px;
+        margin-left: 8px;
+        font-size: 14px;
+        position: static;
+        background-color: #f2f2f2; 
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /* PARTS DELS VÍDEOS. Part General + 8 Parts: videos_individuals, imatges_videos, zona_inferior, zona_logo, informació, títol, nom_youtuber i visites_i_temps */
+
+    .general_videos { 
+        position: relative;
+        width: calc(100% - 240px);      /* No tocar                                             */
+        margin-top: 112px;
+        left: 240px;
+        z-index: 14;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 24px;
+
+        padding: 24px 24px 24px 24px;
+        padding-bottom: 1.7%;
+        box-sizing: border-box;         /* LA CLAU                                              */
+    }
+
+    .videos_individuals {
+        width: 100%;
+    }
+
+    .imatges_videos {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 11px;
+        position: relative;
+    }
+
+    .imatge_video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+
+    .duracio_video {
+        position: absolute;
+        bottom: 13px;
+        right: 8px;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        font-size: 12px;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 500;
+    }
+
+    .zona_inferior {
+        width: 100%;
+        display: flex;
+        margin-top: 11px;
+    }
+
+    .zona_logo {
+        width: 36px;
+        height: 36px;
+        margin-right: 12px;
+    }
+
+    .logo_video {
+        height: 36px;
+        width: 36px;
+        border-radius: 100%;
+    }
+
+    .informacio {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.8;
+    }
+
+    .titol {
+        display: flex;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .titol span {
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 0;
+        font-size: 15px;
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 600;
+        color: rgb(15, 11, 11);       /* Color del Text                                       */
+        line-height: 1.4;               /* Més distància entre les 2 líneas                     */
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+
+    .nom_youtuber {
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .nom_youtuber span {
+        font-size: 14px;
+        color: #606060;
+        line-height: 1.2;
+    }
+    .visites_i_temps span {
+        font-size: 14px;
+        color: #606060;
+        line-height: 1.2;
+    }
+
+
+    .verificat {
+        width: 14px;
+        height: 14px;
+        fill: #606060;
+        flex-shrink: 0;
+    }
+
+    .tres_puntacos {
+        border: none;
+        padding: 0 0 0 14px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        background: none;               /* Necessari                                            */
+    }
+
+    .tres_puntacos svg {
+        fill: #000;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    .shorts {
+        position: relative;
+        width: calc(100% - 240px);              /* No tocar                                                                                        */
+        min-height: 300px;
+
+        padding: 0 16px 0px 15px;
+        margin-left: 240px;
+        box-sizing: border-box;
+    }
+
+    .shorts_titol {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-left: 16px;
+        height: 40px;
+        justify-content: space-between;
+    }
+
+    .shorts_titol span {
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+
+        line-height: 1;                         /* Evita desplaçaments laterals                                                                    */
+    }
+
+    .shorts svg {
+        display: block;
+    }
+
+    .shorts_junt {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .general_shorts {
+        margin-top: 4px;
+
+        display: flex;
+        gap: 16px;
+        padding: 12px 8px;
+        justify-content: flex-start;
+    }
+
+    .general_shorts::-webkit-scrollbar {
+        display: none;                          /* Amaga scroll a Chrome                                                                           */
+    }
+
+    .miniatura_shorts {
+        width: calc((100% - (4 * 16px)) / 5);   /* AQUESTA FÒRMULA ÉS LA HOSTIA. Calcula l'amplada perquè càpiguen 5 miniatures amb espai perfecte */
+        flex-shrink: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0px;                               /* No tocar - enganxa la miniatura amb el text.                                                    */
+    }
+
+    .miniatura_shorts img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;                    /* No tocar - Utilitza tota la imatge possible a l'interior del contenedor.                        */
+        display: block;
+        border-radius: 8px;
+    }
+    
+    .tres_puntacos2 {
+        border: none;
+        background: none;
+        padding-right: 15px;
+        fill: currentColor;
+    }
+
+    .shorts_info {              
+        width: 100%;
+        padding-top: 6px;                       /* No tocar - Ajusta exactament els elements de l'enterior                                         */
+        box-sizing: border-box;                 /* No tocar - Ajusta exactament el contenidor del contingut.                                       */
+
+        border-radius: 6px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2px;
+
+
+        font-family: "Roboto", Arial, sans-serif;
+    }
+
+
+    .miniatura2_shorts {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: black;
+    }
+
+    .miniatura2_shorts img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;                      /* No tocar - Utilitza tota la imatge a l'interior del contenedor.                                 */
+        display: block;
+    }
+
+    .shorts_text {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+    }
+
+    .shorts_title {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.4;
+        padding-top: 4px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .shorts_visites {
+        font-size: 14px;
+        font-weight: 500;
+        color: #606060;
+
+        white-space: nowrap;
+        display: block;
+    }
+
+    .shorts_mes {
+        background: none;
+        border: none;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+        padding: 7px 6px;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    .general_videos2 { 
+        position: relative;
+        width: calc(100% - 240px);      /* No tocar                                             */
+        margin-top: 15px;
+        left: 240px;
+        z-index: 14;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 24px;
+
+        padding: 24px 24px 24px 24px;
+        padding-bottom: 1.7%;
+        box-sizing: border-box;         /* LA CLAU                                              */
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    .link_video {                       /* Links i animacions dels vídeos_individuals           */
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        border-radius: 16px;
+    }
+
+    .link_video .videos_individuals {
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        border-radius: 12px;
+    }
+
+    .link_video:hover .videos_individuals {
+        background-color: rgba(255, 230, 120, 0.35); /* groc suau */
+        transform: scale(1.015);
+    }
+
+
